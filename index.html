@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Category Layout</title>
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#help">Help</a>
+        </nav>
+    </header>
+
+
+    <div class="container">
+
+        <div class="category-section">
+            <div class="category-title">Basics</div>
+            <div class="scroll-buttons">
+                <button onclick="scrollLeft('basics')">&#10094;</button>
+                <button onclick="scrollRight('basics')">&#10095;</button>
+            </div>
+            <div class="box-container basics">
+                <a href="/html/StackArray.html" class="box">Stack</a>
+                <a href="stack2.html" class="box">Stack II</a>
+                <a href="queue.html" class="box">Queue</a>
+                <a href="queue2.html" class="box">Queue II</a>
+                <a href="linked-list.html" class="box">Linked List</a>
+                <a href="binary-tree.html" class="box">Binary Tree</a>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <div class="category-title">Recursion / Dynamic Programming</div>
+            <div class="scroll-buttons">
+                <button onclick="scrollLeft('recursion')">&#10094;</button>
+                <button onclick="scrollRight('recursion')">&#10095;</button>
+            </div>
+            <div class="box-container recursion">
+                <a href="factorial.html" class="box">Factorial</a>
+                <a href="reverse-string.html" class="box">Reverse String</a>
+                <a href="n-queens.html" class="box">N-Queens</a>
+                <a href="fibonacci.html" class="box">Fibonacci</a>
+                <a href="knapsack.html" class="box">Knapsack</a>
+                <a href="maze-path.html" class="box">Maze Path</a>
+            </div>
+        </div>
+
+        <div class="category-section">
+            <div class="category-title">Tree</div>
+            <div class="scroll-buttons">
+                <button onclick="scrollLeft('tree')">&#10094;</button>
+                <button onclick="scrollRight('tree')">&#10095;</button>
+            </div>
+            <div class="box-container tree">
+                <a href="binary-search-tree.html" class="box">Binary Search Tree</a>
+                <a href="avl-tree.html" class="box">AVL Tree</a>
+                <a href="red-black-tree.html" class="box">Red-Black Tree</a>
+                <a href="b-tree.html" class="box">B-Tree</a>
+                <a href="segment-tree.html" class="box">Segment Tree</a>
+                <a href="suffix-tree.html" class="box">Suffix Tree</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function scrollLeft(sectionClass) {
+            const container = document.querySelector(`.${sectionClass}`);
+            container.scrollBy({ left: -200, behavior: 'smooth' });
+        }
+
+        function scrollRight(sectionClass) {
+            const container = document.querySelector(`.${sectionClass}`);
+            container.scrollBy({ left: 200, behavior: 'smooth' });
+        }
+
+    </script>
+</body>
+
+</html>
