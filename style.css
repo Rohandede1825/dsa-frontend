@@ -127,11 +127,33 @@ nav a:hover::after {
     border-radius: 12px;
     font-size: 1.1em;
     cursor: pointer;
+    text-decoration: none;
     padding: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
     position: relative;
     opacity: 0;
     animation: fadeInBox 1s forwards;
+}
+.a box{
+    align-items: center;
+}
+.box img{
+    width: 200px;
+    height: 150px;
+    /* margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px; */
+    text-decoration: none;
+}
+
+.box h3{
+    text-decoration: none;
+    cursor: pointer;
+    color:white;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* opacity: 0; */
 }
 
 .box:hover {
@@ -151,6 +173,14 @@ nav a:hover::after {
         min-width: 120px;
         height: 120px;
     }
+}
+
+.pic_dsa{
+    width: 200px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
 }
 
 .scroll-buttons {
