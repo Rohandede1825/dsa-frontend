@@ -1,0 +1,102 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: #0078d7;
+    color: #fff;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #005a9e;
+}
+
+nav a.active {
+    background-color: #005a9e;
+}
+
+/* Main Content */
+main {
+    margin-top: 20px;
+}
+
+main h2 {
+    color: #0078d7;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #0078d7;
+    padding-bottom: 5px;
+}
+
+main p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+main ul {
+    margin: 10px 0 20px 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+main ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+footer strong {
+    color: #0078d7;
+}
