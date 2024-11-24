@@ -123,7 +123,7 @@ EM {
     font-family: 'Courier New', Courier, monospace;
 }
 
-#copyButton {
+#copyButton{
     position: absolute;
     top: 34px;
     right: 32px;
