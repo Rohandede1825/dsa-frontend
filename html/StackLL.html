@@ -68,46 +68,62 @@
 					</div>
 					<div class="code-container">
 						<pre><code id="codeBlock" class="language-java">public class Stack {
-									private int[] stack;
-									private int top;
-									private int capacity;
-								
-									// Constructor to initialize the stack
-									public Stack(int size) {
-										stack = new int[size];
-										capacity = size;
-										top = -1;
-									}
-								
-									// Method to add an element to the stack (push)
-									public void push(int x) {
-										if (top == capacity - 1) {
-											System.out.println("Stack Overflow");
-											return;
-										}
-										stack[++top] = x;
-									}
-								
-									// Method to remove the top element from the stack (pop)
-									public int pop() {
-										if (top == -1) {
-											System.out.println("Stack Underflow");
-											return -1;
-										}
-										return stack[top--];
-									}
-								
-									// Method to clear the stack
-									public void clear() {
-										top = -1; // Reset the stack to an empty state
-									}
+							private Node top; // Reference to the top node of the stack
+						
+							// Node class to represent each element in the stack
+							private static class Node {
+								int data;
+								Node next;
+						
+								Node(int data) {
+									this.data = data;
+									this.next = null;
 								}
+							}
+						
+							// Constructor to initialize the stack
+							public Stack() {
+								top = null; // Initially, the stack is empty
+							}
+						
+							// Method to add an element to the stack (push)
+							public void push(int x) {
+								Node newNode = new Node(x); // Create a new node
+								newNode.next = top;        // Link the new node to the top
+								top = newNode;             // Update the top to the new node
+							}
+						
+							// Method to remove the top element from the stack (pop)
+							public int pop() {
+								if (isEmpty()) {
+									System.out.println("Stack Underflow");
+									return -1; // Return -1 if the stack is empty
+								}
+								int poppedData = top.data; // Get the data of the top node
+								top = top.next;            // Update the top to the next node
+								return poppedData;
+							}
+						
+							// Method to check if the stack is empty
+							public boolean isEmpty() {
+								return top == null;
+							}
+						
+							// Method to clear the stack
+							public void clear() {
+								top = null; // Reset the top to null, clearing the stack
+							}
+						}
+						
 										</code></pre>
 					</div>
 				</div>
 
 			</div>
-
+			<div id="comp">
+                <div id="time">Time Complexity: O(n)</div>
+                <div id="space">Space Complexity: O(n)</div>
+            </div>
 			<div id="generalAnimationControlSection">
 				<!-- Table for buttons to control general animation (play/pause/undo/etc) ->
 					<!-- (filled in by javascript code, specifically AnimationMain.js)  -->
@@ -122,6 +138,17 @@
 		</div>
 
 	</div><!-- container -->
+	<script>
+        document.getElementById('copyButton').addEventListener('click', function () {
+            const codeBlock = document.getElementById('codeBlock');
+            const textArea = document.createElement('textarea');
+            textArea.value = codeBlock.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+        });
+    </script>
 </body>
 
 </html>
