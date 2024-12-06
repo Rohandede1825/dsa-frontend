@@ -220,6 +220,40 @@ nav a:hover::after {
 .box:nth-child(16) { background-color: #df4444; }
 .box:nth-child(17) { background-color: #ff8800; }
 .box:nth-child(18) { background-color: #df4444; }
+.scroll-buttons button {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+    .scroll-buttons button {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.box {
+    flex: 1 1 calc(33.333% - 20px); /* 3 boxes per row */
+    margin: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .box {
+        flex: 1 1 calc(50% - 10px); /* 2 boxes per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        flex: 1 1 100%; /* 1 box per row */
+    }
+}
+
 
 @keyframes fadeIn {
     0% { opacity: 0; }
