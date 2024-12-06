@@ -84,17 +84,21 @@ QueueLL.prototype.addControls =  function()
 {
 	this.controls = [];
 	this.enqueueField = addControlToAlgorithmBar("Text", "");
+	this.enqueueField.classList.add('custom-input');
 	this.enqueueField.onkeydown = this.returnSubmit(this.enqueueField,  this.enqueueCallback.bind(this), 6);
 	this.enqueueButton = addControlToAlgorithmBar("Button", "Enqueue");
+	this.enqueueButton.classList.add('custom-button');
 	this.enqueueButton.onclick = this.enqueueCallback.bind(this);
 	this.controls.push(this.enqueueField);
 	this.controls.push(this.enqueueButton);
 
 	this.dequeueButton = addControlToAlgorithmBar("Button", "Dequeue");
+	this.dequeueButton.classList.add('custom-button');
 	this.dequeueButton.onclick = this.dequeueCallback.bind(this);
 	this.controls.push(this.dequeueButton);
 	
 	this.clearButton = addControlToAlgorithmBar("Button", "Clear Queue");
+	this.clearButton.classList.add('custom-button');
 	this.clearButton.onclick = this.clearCallback.bind(this);
 	this.controls.push(this.clearButton);
 	
