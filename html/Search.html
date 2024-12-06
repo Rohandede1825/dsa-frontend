@@ -3,7 +3,7 @@
 	<head>
 		
 		<title>
-			Fibonacci Heap Visualization
+			Binary and Linear Search Visualization 
 		</title>
 		
 		<!-- css sheet for how the page is laid out -->
@@ -12,8 +12,7 @@
 			
 			
 		<!-- jqueury stuff.  Only used for the animation speed slider. -->
-		<link rel="stylesheet" href="/ThirdParty/jquery-ui-1.8.11.custom.css">
-				
+		<link rel="stylesheet" href="/ThirdParty/jquery-ui-1.8.11.custom.css">				
 		<script src="/ThirdParty/jquery-1.5.2.min.js"></script>
 		<script src="/ThirdParty/jquery-ui-1.8.11.custom.min.js"></script>
 				
@@ -29,8 +28,9 @@
 		<script type = "text/javascript" src = "/AnimationLibrary/Line.js"> </script>
 		<script type = "text/javascript" src = "/AnimationLibrary/ObjectManager.js"> </script>
 		<script type = "text/javascript" src = "/AnimationLibrary/AnimationMain.js"> </script>
+
 		<script type = "text/javascript" src = "/AlgorithmLibrary/Algorithm.js"> </script>
-		<script type = "text/javascript" src = "/AlgorithmLibrary/FibonacciHeap.js"> </script> 
+		<script type = "text/javascript" src = "/AlgorithmLibrary/Search.js"> </script> 
 				
 			
 	 </head> 
@@ -40,8 +40,9 @@
 		<div id = "container">
 			
 			<div id="header">  
-				<h1>Fibonacci Heap</h1>
-				<button class="Home_btn"><a href="index.html">Home</a></button>
+				<h1>Searching Sorted List</h1>
+
+				<button class="Home_btn"><a href="/index.html">Home</a></button>
 
 			</div>
 			
@@ -56,6 +57,7 @@
 					<!-- Drawing canvas where all animation is done.  Note:  can be resized in code -->
 									
 				<canvas id="canvas" width="900" height="500"></canvas>
+
 				
 				<div id="code">
 					<div id="algo">
@@ -104,6 +106,7 @@
 					</div>
 	
 				</div>
+				
 				<div id = "generalAnimationControlSection">
 					<!-- Table for buttons to control general animation (play/pause/undo/etc) ->
 					<!-- (filled in by javascript code, specifically AnimationMain.js)  -->

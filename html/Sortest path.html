@@ -3,7 +3,7 @@
 	<head>
 		
 		<title>
-			Fibonacci Heap Visualization
+			Dijkstra Visualzation
 		</title>
 		
 		<!-- css sheet for how the page is laid out -->
@@ -29,19 +29,21 @@
 		<script type = "text/javascript" src = "/AnimationLibrary/Line.js"> </script>
 		<script type = "text/javascript" src = "/AnimationLibrary/ObjectManager.js"> </script>
 		<script type = "text/javascript" src = "/AnimationLibrary/AnimationMain.js"> </script>
+		
 		<script type = "text/javascript" src = "/AlgorithmLibrary/Algorithm.js"> </script>
-		<script type = "text/javascript" src = "/AlgorithmLibrary/FibonacciHeap.js"> </script> 
+		<script type = "text/javascript" src = "/AlgorithmLibrary/Graph.js"> </script>
+		<script type = "text/javascript" src = "/AlgorithmLibrary/DijkstraPrim.js"> </script>
 				
 			
 	 </head> 
 	
-	<body onload="init();" class="VisualizationMainPage">
+	<body onload="init(true);" class="VisualizationMainPage">
 		
 		<div id = "container">
 			
 			<div id="header">  
-				<h1>Fibonacci Heap</h1>
-				<button class="Home_btn"><a href="index.html">Home</a></button>
+				<h1> Shortest Path</h1>
+				<button class="Home_btn"><a href="/index.html">Home</a></button>
 
 			</div>
 			
