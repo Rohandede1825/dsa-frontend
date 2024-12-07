@@ -60,65 +60,58 @@
 							<h2>Algorithm</h2>
 							<button id="copyButton">Copy</button>
 						</div>
-						<div class="code-container">
-							<pre><code id="codeBlock" class="language-java">public class Queue {
-								private Node front; // Pointer to the front of the queue
-								private Node rear;  // Pointer to the rear of the queue
-								private int size;   // Size of the queue
+						<div class="code-container" >
+							<pre><code id="codeBlock" class="language-java" style="color: #1E90FF;"><span style="color: #FFD700;">public class Queue </span>{
+								private Node front;
+								private Node rear;
+								private int size;
 							
-								// Constructor to initialize the queue
-								public Queue() {
+								<span style="color: #FFD700;">public Queue() </span>{
 									this.front = null;
 									this.rear = null;
 									this.size = 0;
 								}
 							
-								// Method to add an element to the queue (enqueue)
-								public void enqueue(int data) {
+								<span style="color: #FFD700;">public void enqueue(int data) </span>{
 									Node newNode = new Node(data);
 									if (rear == null) {
-										// If the queue is empty, front and rear both point to the new node
 										front = rear = newNode;
 									} else {
-										// Add the new node to the end of the queue and move the rear pointer
 										rear.next = newNode;
 										rear = newNode;
 									}
 									size++;
-									System.out.println(data + " enqueued to the queue.");
 								}
-								// Method to remove an element from the queue (dequeue)
-								public int dequeue() {
+							
+								<span style="color: #FFD700;">public int dequeue()</span> {
 									if (front == null) {
-										// Queue is empty
-										System.out.println("Queue Underflow. The queue is empty.");
+										System.out.println("Queue Underflow");
 										return -1;
 									}
-							
-									int data = front.data; // Retrieve the data from the front node
-									front = front.next;    // Move the front pointer to the next node
-							
-									// If the queue becomes empty after the operation, set rear to null
+									int data = front.data;
+									front = front.next;
 									if (front == null) {
 										rear = null;
 									}
 									size--;
-									System.out.println(data + " dequeued from the queue.");
 									return data;
 								}
 							
-								// Method to check if the queue is empty
-								public boolean isEmpty() {
-									return front == null;
+								<span style="color: #FFD700;">public void clear() </span>{
+									front = rear = null;
+									size = 0;
 								}
 							
-								// Method to clear the queue
-								public void clear() {
-									front = rear = null; // Reset front and rear pointers
-									size = 0;            // Reset the size of the queue
-									System.out.println("Queue cleared.");
+								<span style="color: #FFD700;">private class Node</span> {
+									int data;
+									Node next;
+							
+									Node(int data) {
+										this.data = data;
+									}
 								}
 							}
+							
 										</code></pre>
 						</div>
 					</div>

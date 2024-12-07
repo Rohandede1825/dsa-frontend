@@ -50,46 +50,42 @@
                         <h2>Algorithm</h2>
                         <button id="copyButton">Copy</button>
                     </div>
-                    <div class="code-container">
-                        <pre><code id="codeBlock" class="language-java">public class Stack {
-								private int[] stack;
-								private int top;
-								private int capacity;
-							
-								// Constructor to initialize the stack
-								public Stack(int size) {
-									stack = new int[size];
-									capacity = size;
-									top = -1;
-								}
-							
-								// Method to add an element to the stack (push)
-								public void push(int x) {
-									if (top == capacity - 1) {
-										System.out.println("Stack Overflow");
-										return;
-									}
-									stack[++top] = x;
-								}
-							
-								// Method to remove the top element from the stack (pop)
-								public int pop() {
-									if (top == -1) {
-										System.out.println("Stack Underflow");
-										return -1;
-									}
-									return stack[top--];
-								}
-							
-								// Method to clear the stack
-								public void clear() {
-									top = -1; // Reset the stack to an empty state
-								}
-							}
-									</code></pre>
-                    </div>
-                </div>
+<div class="code-container">
+    <pre><code id="codeBlock" class="language-java" style="color: #1E90FF;">
+<span style="color: #FFD700;">public class Stack</span> {
+    private int[] stack;
+    private int top;
+    private int capacity;
 
+    <span style="color: #FFD700;">public Stack(int size) </span>{
+        stack = new int[size];
+        capacity = size;
+        top = -1;
+    }
+
+    <span style="color: #FFD700;">public void push(int x)</span> {
+        if (top == capacity - 1) {
+            System.out.println("Stack Overflow");
+            return;
+        }
+        stack[++top] = x;
+    }
+
+    <span style="color: #FFD700;">public int pop()</span> {
+        if (top == -1) {
+            System.out.println("Stack Underflow");
+            return -1;
+        }
+        return stack[top--];
+    }
+
+    <span style="color: #FFD700;">public void clear()</span> {
+        top = -1;
+    }
+}
+</code></pre>
+</div>
+</div>
             </div>
             <div id="comp">
                 <div id="time">Time Complexity: O(1)</div>

@@ -66,41 +66,49 @@
 							<button id="copyButton">Copy</button>
 						</div>
 						<div class="code-container">
-							<pre><code id="codeBlock" class="language-java">public class Stack {
-									private int[] stack;
-									private int top;
-									private int capacity;
-								
-									// Constructor to initialize the stack
-									public Stack(int size) {
-										stack = new int[size];
-										capacity = size;
-										top = -1;
-									}
-								
-									// Method to add an element to the stack (push)
-									public void push(int x) {
-										if (top == capacity - 1) {
-											System.out.println("Stack Overflow");
-											return;
-										}
-										stack[++top] = x;
-									}
-								
-									// Method to remove the top element from the stack (pop)
-									public int pop() {
-										if (top == -1) {
-											System.out.println("Stack Underflow");
-											return -1;
-										}
-										return stack[top--];
-									}
-								
-									// Method to clear the stack
-									public void clear() {
-										top = -1; // Reset the stack to an empty state
-									}
+							<pre><code id="codeBlock" class="language-java" style="color: #1E90FF;"><span style="color: #FFD700;">public class Queue </span>{
+								private int[] queue;
+								private int front;
+								private int rear;
+								private int capacity;
+								private int size;
+							
+								<span style="color: #FFD700;">public Queue(int capacity)</span> {
+									this.capacity = capacity;
+									this.queue = new int[capacity];
+									this.front = 0;
+									this.rear = -1;
+									this.size = 0;
 								}
+							
+								<span style="color: #FFD700;">public void enqueue(int x)</span> {
+									if (size == capacity) {
+										System.out.println("Queue Overflow");
+										return;
+									}
+									rear = (rear + 1) % capacity;
+									queue[rear] = x;
+									size++;
+								}
+							
+								<span style="color: #FFD700;">public int dequeue()</span> {
+									if (size == 0) {
+										System.out.println("Queue Underflow");
+										return -1;
+									}
+									int item = queue[front];
+									front = (front + 1) % capacity;
+									size--;
+									return item;
+								}
+							
+								<span style="color: #FFD700;">public void clear()</span> {
+									front = 0;
+									rear = -1;
+									size = 0;
+								}
+							}
+							
 										</code></pre>
 						</div>
 					</div>
@@ -121,5 +129,16 @@
 			</div>
 
 		</div><!-- container -->
+		<script>
+			document.getElementById('copyButton').addEventListener('click', function () {
+				const codeBlock = document.getElementById('codeBlock');
+				const textArea = document.createElement('textarea');
+				textArea.value = codeBlock.textContent;
+				document.body.appendChild(textArea);
+				textArea.select();
+				document.execCommand('copy');
+				document.body.removeChild(textArea);
+			});
+		</script>
 	</body>
 </html>

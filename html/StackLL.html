@@ -67,41 +67,47 @@
 						<button id="copyButton">Copy</button>
 					</div>
 					<div class="code-container">
-						<pre><code id="codeBlock" class="language-java">
-							public class Stack {
-							// Constructor to initialize the stack
-							public Stack() {
-								top = null; // Initially, the stack is empty
+						<pre><code id="codeBlock" class="language-java"  style="color: #1E90FF;"><span style="color: #FFD700;">public class Stack </span>{
+							private Node top;
+						
+							<span style="color: #FFD700;">public Stack()</span> {
+								top = null;
 							}
 						
-							// Method to add an element to the stack (push)
-							public void push(int x) {
-								Node newNode = new Node(x); // Create a new node
-								newNode.next = top;        // Link the new node to the top
-								top = newNode;             // Update the top to the new node
+							<span style="color: #FFD700;">public void push(int x)</span> {
+								Node newNode = new Node(x);
+								newNode.next = top;
+								top = newNode;
 							}
 						
-							// Method to remove the top element from the stack (pop)
-							public int pop() {
+							<span style="color: #FFD700;">public int pop()</span> {
 								if (isEmpty()) {
 									System.out.println("Stack Underflow");
-									return -1; // Return -1 if the stack is empty
+									return -1;
 								}
-								int poppedData = top.data; // Get the data of the top node
-								top = top.next;            // Update the top to the next node
+								int poppedData = top.data;
+								top = top.next;
 								return poppedData;
 							}
 						
-							// Method to check if the stack is empty
 							public boolean isEmpty() {
 								return top == null;
 							}
 						
-							// Method to clear the stack
-							public void clear() {
-								top = null; // Reset the top to null, clearing the stack
+							<span style="color: #FFD700;">public void clear()</span> {
+								top = null;
+							}
+						
+							<span style="color: #FFD700;">private class Node</span> {
+								int data;
+								Node next;
+						
+								Node(int data) {
+									this.data = data;
+								}
 							}
 						}
+						
 							</code></pre>
 					</div>
 				</div>
