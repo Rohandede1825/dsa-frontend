@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+body {
+    font: 100% Verdana, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #000000;
+}
+
+.VisualizationMainPage #mainContent, .VisualizationMainPage #container {
+    background: #FFFFFF;
+}
+
+.VisualizationMainPage #container {
+    margin: 0 auto;
+    text-align: left;
+}
+
+.VisualizationMainPage #algoControlSection, .VisualizationMainPage #generalAnimationControlSection {
+    text-align: center;
+    align-items: center;
+}
+
+.VisualizationMainPage #algoControlSection {
+    right:20px;
+    display: relative;
+    margin-left: 20px;
+    margin-top: 7px;
+    margin-right: 1200px;
+    color: #000000;
+    size: 30px;
+}
+
+.VisualizationMainPage #generalAnimationControlSection {
+    margin-top: 60px;
+    margin-right: 350px;
+    margin-left: 10px;
+
+    background: #7497f6;
+    color: #0b0c0b;
+}
+
+.VisualizationMainPage #header {
+    align-items: center;
+    background: #5d99e8;
+    color: #d5d210;
+    padding: 2px 10px 2px 20px;
+    text-align: center;
+}
+
+.VisualizationMainPage #header a:visited, .VisualizationMainPage #header a:link {
+    text-decoration: none;
+    color: white;
+}
+#header{
+    display:flex;
+    text-align: center;
+    
+}
+
+.VisualizationMainPage #header h1 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.VisualizationMainPage #footer {
+    margin-top: 20px;
+    background: #5d99e8;
+    color: #fffffd;
+    padding: 0 10px;
+}
+
+.VisualizationMainPage #footer a:visited, .VisualizationMainPage #footer a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.VisualizationMainPage #footer p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.VisualizationMainPage #mainContent h1, .VisualizationMainPage #mainContent h2, .VisualizationMainPage #mainContent h3 {
+    padding: 0 89px;
+    background: #FFFFFF;
+    color: #006633;
+}
+
+EM {
+    font-style: bold;
+}
+
+.nav .li {
+    color: blue;
+}
+
+#code {
+    position: absolute;
+    left: 959px;
+    top: 105px;
+    height: auto;
+    width: 489px;
+    /* border: 2px solid black; */
+    overflow: auto;
+    background-color: white;
+}
+
+#algo {
+
+    /* margin-top: 20px; */
+    width: 460px;
+    height: auto;
+    font-size: 20px;
+    position: relative;
+    text-align: left;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-left: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#copyButton{
+    position: absolute;
+    top: 34px;
+    right: 32px;
+    background-color: #3dacf4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 9px 24px;
+    cursor: pointer;
+}
+
+#copyButton:hover {
+    background-color: #759ec9;
+}
+
+.code-container {
+    max-height: 438px;
+    overflow-y: auto;
+    background-color: #fcfcfc;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#codeBlock {
+    white-space: pre-wrap;
+    font-size: 16px;
+    color: #333;
+}
+
+#time, #space {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.name_and_button{
+    display: flex;
+}
+
+#canvas{
+   
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-right: 300px;
+}
+#time,#space{
+    margin-left: 10px;
+}
+
+.custom-input {
+    width: 200px;        
+    padding: 10px;       
+    margin: 10px 0;      
+    box-sizing: border-box; 
+    border: 2px solid #ccc; 
+    border-radius: 4px;    
+    font-size: 16px;       
+}
+
+.custom-input:focus {
+    border-color: #4CAF50; 
+    box-shadow: 0 0 8px 2px rgba(76, 175, 80, 0.5); 
+}
+
+.custom-button {
+    background-color: #328ec9; 
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.custom-button:hover {
+    background-color: #59a9da; 
+}
+#algoControlSection{
+    background-color: white;
+}
+#AlgorithmSpecificControls{
+    position: relative;
+    left: 20px;
+    background-color: white;
+    width: 602px;
+}
+.nav{
+    margin-top: 7px;
+    margin-left: 140px;
+    left: 2px;
+    display: flex;
+    gap:15px;
+    text-decoration: none;
+    
+ }
+ .nav a{
+    background-color: #5d99e8;
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    border-radius: 3px;
+ }
+
+ .Home_btn {
+    margin-left:800px;
+    /* margin-right: 30px; */
+    /* left:20; */
+    background-color: #328ec9; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+ }
