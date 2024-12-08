@@ -79,11 +79,14 @@ RecFact.prototype.addControls =  function()
 {
 	this.controls = [];
 	this.factorialField = addControlToAlgorithmBar("Text", "");
+	// this.factorialFieldclassList.add('custom-input');
 	this.factorialField.onkeydown = this.returnSubmit(this.factorialField,  this.factorialCallback.bind(this), 2, true);
-	this.controls.push(this.factorialField);
 
+	this.controls.push(this.factorialField);
+	
 	this.factorialButton = addControlToAlgorithmBar("Button", "Factorial");
 	this.factorialButton.onclick = this.factorialCallback.bind(this);
+	this.factorialButton.classList.add('custom-button');
 	this.controls.push(this.factorialButton);
 		
 }
