@@ -17,7 +17,7 @@ body {
 
 /* Container */
 .container {
-    width: 80%;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -40,6 +40,7 @@ nav {
     text-align: center;
     margin-top: 10px;
     display:flex;
+    margin-left: 35px;
 }
 
 nav a {
