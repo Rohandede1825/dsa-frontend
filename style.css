@@ -147,13 +147,24 @@ nav a:hover::after {
 }
 
 .box h3{
-    text-decoration: none;
+    /* text-decoration: none; */
     cursor: pointer;
     color:white;
     font-weight: bold;
     color: white;
     transition: transform 0.3s, box-shadow 0.3s;
     /* opacity: 0; */
+}
+
+/* .box a h3 {
+    text-decoration: none;
+}
+a h3 {
+    text-decoration: none;
+} */
+
+a{
+    text-decoration: none;
 }
 
 .box:hover {
@@ -178,6 +189,9 @@ nav a:hover::after {
         height:100px;
         text-decoration: none;
     }
+    .box a h3 {
+        text-decoration: none;
+    }
 }
 
 @media (max-width: 580px) {
@@ -188,6 +202,9 @@ nav a:hover::after {
     .box img {
         min-width: 100px;
         height: 70px;
+    }
+    .box a h3 {
+        text-decoration: none;
     }
 }
 @media (max-width:300px) {
@@ -202,6 +219,9 @@ nav a:hover::after {
     }
     .box h3{
         font-size: 8px;
+    }
+    .box a h3 {
+        text-decoration: none;
     }
 }
 
