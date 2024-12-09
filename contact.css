@@ -39,6 +39,7 @@ header h1 {
 nav {
     text-align: center;
     margin-top: 10px;
+    display: flex;
 }
 
 nav a {
@@ -93,6 +94,7 @@ main p {
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
+    width: 400px;
 }
 
 .creator h3 {
@@ -133,4 +135,32 @@ footer {
 
 footer strong {
     color: #0078d7;
+}
+
+@media (max-width: 768px) {
+    .creator {
+        flex: 1 1 100%; /* Full-width boxes for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header nav a {
+        font-size: 1rem;
+    }
+
+    .creator {
+        padding: 1rem;
+    }
+
+    .creator h3 {
+        font-size: 1.3rem;
+    }
+
+    .creator p {
+        font-size: 0.9rem;
+    }
 }
