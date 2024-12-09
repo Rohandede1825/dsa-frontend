@@ -39,7 +39,7 @@ header h1 {
 nav {
     text-align: center;
     margin-top: 10px;
-    display:flex;
+    display:flexbox;
     margin-left: 35px;
 }
 
@@ -51,6 +51,7 @@ nav a {
     padding: 5px 10px;
     border-radius: 5px;
     display:flexbox;
+    text-align: center;
 }
 
 nav a:hover {
@@ -103,3 +104,4 @@ footer {
 footer strong {
     color: #0078d7;
 }
+

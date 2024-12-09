@@ -39,7 +39,7 @@ header h1 {
 nav {
     text-align: center;
     margin-top: 10px;
-    display: flex;
+    display: flexbox;
     margin-left: 35px;
 }
 
@@ -95,7 +95,7 @@ main p {
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: left;
-    width: 400px;
+    /* width: 400px; */
 }
 
 .creator h3 {
