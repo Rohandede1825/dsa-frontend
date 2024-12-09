@@ -187,7 +187,7 @@ nav a:hover::after {
     }
     .box img {
         min-width: 100px;
-        height: 80px;
+        height: 70px;
     }
 }
 @media (max-width:300px) {
@@ -197,11 +197,11 @@ nav a:hover::after {
     }
     .box img {
         min-width: 90px;
-        height: 80px;
+        height: 70px;
 
     }
     .box h3{
-        font-size: 10px;
+        font-size: 8px;
     }
 }
 
